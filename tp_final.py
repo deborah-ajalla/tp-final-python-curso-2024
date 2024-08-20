@@ -1,8 +1,6 @@
 # Trabajo Práctico Final - Curso Introductorio de Python
-
-
+#------------------------------------------------------------
 ##  ⏩ EJERCICIO 1: Números y Cadenas de Caracteres ⏪
-
 #-------------------------------------------------------------
 #1.
 """
@@ -68,8 +66,11 @@ print ("------------------------------------------")
 """
 
 cadena_usuario = input ("-> Ingrese una Cadena de Texto: ")
-repeticiones = int (input ("-> Ingrese un Número Entero: "))
+repeticiones = int (input ("-> Ingrese un Número Entero (del 1 al 10): "))
 
-
+r = 0
+while r < repeticiones:
+    r+=1
+    print(F" > {cadena_usuario}, repetición nº: {r}") 
 
 #-------------------------------------------------------------
