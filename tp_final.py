@@ -1,6 +1,6 @@
 # Trabajo Práctico Final - Curso Introductorio de Python
 #------------------------------------------------------------
-##  ⏩ EJERCICIO 1: Números y Cadenas de Caracteres ⏪
+##  ⏩⏩ EJERCICIO 1: Números y Cadenas de Caracteres ⏪⏪
 #-------------------------------------------------------------
 #1.
 """
@@ -73,4 +73,82 @@ while r < repeticiones:
     r+=1
     print(F" > {cadena_usuario}, repetición nº: {r}") 
 
+#-------------------------------------------------------------
+## ⏩⏩ EJERCICIO 2: Listas y Tuplas ⏪⏪
+#-------------------------------------------------------------
+# 1.
+"""
+    1. Crea una lista con los nombres de tres frutas. Luego:
+    - Añade dos frutas más a la lista.
+    - Ordena la lista alfabéticamente.
+    - Muestra la lista completa.
+    - Elimina una fruta de la lista y muestra el resultado.
+"""
+lista_frutas = ["cereza", "pera", "durazno"]
+print ("\n------------------------------------------\n")
+print (F"--> Listado de Frutas: {lista_frutas} ✔")
+
+lista_frutas.append ("frutilla")
+lista_frutas.append ("banana")
+print (F"\n--> Listado Con dos Frutas más: {lista_frutas} ✔")
+
+lista_frutas.sort()
+print (F" \n--> Listado Ordenado: {lista_frutas} ✔")
+
+lista_frutas.pop ()
+print (F"\n--> Listado Actualizado Sin La Última Fruta: {lista_frutas} ✔")
+print ("\n------------------------------------------\n")
+
+#-------------------------------------------------------------
+# 2.
+"""
+    2. Crea una tupla con los nombres de dos ciudades. Luego:
+    - Muestra el primer y último elemento de la tupla.
+    - Convierte la tupla en una lista, añade una nueva ciudad y muestra la lista resultante.
+"""
+ciudades = ("Roma", "Moscú")
+print ("--> CIUDADES <--")
+print (F"--> Primera de la Tupla: {ciudades[0]} ✔")
+print (F"--> Última de la Tupla: {ciudades[1]} ✔")
+
+lista_ciudades = []
+lista_ciudades.append (ciudades[0])
+lista_ciudades.append (ciudades[1])
+lista_ciudades.append ("Las Vegas")
+print (F"--> La Lista de Ciudades es: {lista_ciudades} ✔")
+print ("\n------------------------------------------\n")
+#-------------------------------------------------------------
+# 3.
+"""
+    3. Crea una lista de números enteros y muestra:
+    - El número mayor de la lista.
+    - El número menor de la lista.
+    - El promedio de los números en la lista.
+"""
+lista_numeros = [3, 1, 6, 2]
+print (F"--> Lista de Números: {lista_numeros} ✔ \n")
+
+lista_numeros.sort()
+print (F"--> El Número Mayor es: {lista_numeros[-1]} ✔ \n")
+print (F"--> El Número Menor es: {lista_numeros[0]} ✔ \n")
+
+suma_lista = sum(lista_numeros)                  # --> suma todos los elementos de la lista ✔
+promedio_lista = suma_lista / len (lista_numeros)
+print (F"--> El Promedio de los elementos de la Lista es: {promedio_lista} ✔")
+print ("\n------------------------------------------\n")
+#-------------------------------------------------------------
+# 4.
+"""
+    4. Escribe un programa que reciba una lista de cadenas y muestre la lista con todas las cadenas en mayúsculas.
+"""
+lista_cadenas = []
+elemento_cadena = int (input ("Ingrese la Cantidad de Cadenas que desea cargar (del 1 al 9): "))
+
+e = 0
+while e < elemento_cadena:
+    nuevo_elemento = input ("> Ingrese una Cadena: ")
+    lista_cadenas.append(nuevo_elemento.upper())
+    e+=1
+print (F" --> La Lista está compuesta por: {lista_cadenas} ✔")    
+print ("\n------------------------------------------\n")
 #-------------------------------------------------------------
