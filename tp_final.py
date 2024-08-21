@@ -152,3 +152,86 @@ while e < elemento_cadena:
 print (F" --> La Lista está compuesta por: {lista_cadenas} ✔")    
 print ("\n------------------------------------------\n")
 #-------------------------------------------------------------
+## ⏩⏩ EJERCICIO 3: Controladores de Flujo ⏪⏪
+#-------------------------------------------------------------
+# 1.
+"""
+    1. Escribe un programa que pida un número al usuario. Muestra si el número es par o impar.
+"""
+numero_usuario = int (input ("--> Ingrese un Número: "))
+
+if (numero_usuario % 2) == 0:
+    print (F"> El Número '{numero_usuario}' es par ✔")
+else:
+    print (F"> El Número '{numero_usuario}' es impar ✔")
+    print ("\n------------------------------------------\n")
+#-------------------------------------------------------------
+# 2.
+"""
+    2. Crea un programa que simule un menú simple con las siguientes opciones:
+        1. Saludar
+        2. Despedirse
+        3. Salir
+        - Dependiendo de la opción elegida, muestra un mensaje correspondiente. Si se elige 3, el programa debe terminar.
+"""
+print ("\t 🔸🔸🔸🔸🔸 BIENVENIDO/A 🔸🔸🔸🔸🔸\n")
+  
+nombre_usuario = input ("Ingrese su Nombre: ")
+nombre_usuario = nombre_usuario.title()
+
+while True:
+    print ("-----------------------")
+    print ("\n   ✨ MENÚ ✨")
+    print (" > 1. Saludar")
+    print (" > 2. Despedirse")
+    print (" > 3. Salir")
+
+    opcion = input ("\n >> Ingrese una opción del 1 al 3: ")
+   
+    if opcion == "1":
+         print (F"   -> Hola {nombre_usuario} 😊")
+
+    elif opcion == "2":
+         print (F"   -> Adiós {nombre_usuario} 🤗")
+    elif opcion == "3":
+        print (F"   -> Hasta Luego {nombre_usuario} 😊")
+        break
+    else:
+        print (F"  ❌❌ Por Favor {nombre_usuario} ingresá una opción correcta ❌❌")
+print ("\n  😊 Gracias Vuelva Pronto!!😊")
+print ("----------------------")
+
+print ("\n------------------------------------------\n")
+#-------------------------------------------------------------
+# 3.
+"""
+    3. Escribe un programa que pida un número al usuario y determine si es positivo, negativo o cero.
+"""
+un_numero =  int (input ("> Ingrese un número entero: "))
+    
+if un_numero > 0: 
+     print (F" --> El Número '{un_numero}' es Positivo ✔")
+elif un_numero < 0:
+     print (F"--> El Número '{un_numero}' es Negativo ✔")    
+else:
+     print ("--> El Número Ingresado es Cero ✔" ) 
+print ("\n------------------------------------------\n")
+#-------------------------------------------------------------
+# 4.
+"""
+     4. Escribe un programa que muestre los números del 1 al 10 utilizando un bucle `for`.
+"""
+print("--> Se Muestran Números del 1 al 10 usando 'for':")
+for i in range(1, 11): 
+    print("- ",i)
+print ("\n------------------------------------------\n")
+#-------------------------------------------------------------
+# 5.
+"""
+    5. Escribe un programa que calcule la suma de los números del 1 al 100 utilizando un bucle `while`.
+"""
+print("--> Se Muestran Suma de Números del 1 al 100 usando 'while':")
+
+
+print ("\n------------------------------------------\n")
+#-------------------------------------------------------------
