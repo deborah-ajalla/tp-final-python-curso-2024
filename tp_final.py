@@ -231,7 +231,149 @@ print ("\n------------------------------------------\n")
     5. Escribe un programa que calcule la suma de los números del 1 al 100 utilizando un bucle `while`.
 """
 print("--> Se Muestran Suma de Números del 1 al 100 usando 'while':")
-
-
+x = 1
+suma_while = 0
+print (" ✨ Números que se recorren: ")
+while x <= 100:
+    print(F" > {x}")
+    suma_while = suma_while + x
+    # x = x + 1
+    x += 1
+      
+print (F"\n --> El Resultado de La Suma es: {suma_while} ✔") 
 print ("\n------------------------------------------\n")
 #-------------------------------------------------------------
+## ⏩⏩ EJERCICIO 4: Conjuntos y Diccionarios ⏪⏪
+#-------------------------------------------------------------
+# 1.
+"""
+    1. Crea dos conjuntos con algunos números. Luego:
+    - Muestra la unión de los dos conjuntos.
+    - Muestra la diferencia entre los dos conjuntos.
+    - Muestra los elementos comunes en ambos conjuntos.
+"""
+print ("🔸🔸🔸 CONJUNTOS 🔸🔸🔸")
+conjunto_1 = {10, 10, 20, 30, 40, 50}
+conjunto_2 = { 60, 70, 80, 90, 100, 10, 20}
+
+print (F" --> Conjunto 1: {conjunto_1}")
+print (F" --> Conjunto 2: {conjunto_2} ")
+
+union_conjunto = conjunto_1.union (conjunto_2)
+diferencia_1 = conjunto_1.difference(conjunto_2) 
+diferencia_2 = conjunto_2.difference (conjunto_1)
+diferencia_conjuntos = diferencia_1.union(diferencia_2) 
+interseccion_conjuntos = conjunto_1.intersection(conjunto_2)
+
+print (F"\n > La unión de Ambos Conjuntos: {union_conjunto} ✔")
+print (F"\n > La diferencia de Ambos Conjuntos: {diferencia_conjuntos} ✔")
+print (F"\n > Los elementos Comunes en Ambos Conjuntos: {interseccion_conjuntos} ✔")
+print ("\n------------------------------------------\n")
+#-------------------------------------------------------------
+# 2.
+"""
+    2. Crea un diccionario con tres nombres como claves y edades como valores. Luego:
+    - Muestra la edad del primer nombre en el diccionario.
+    - Añade un nuevo nombre y edad al diccionario.
+    - Elimina un nombre del diccionario y muestra el resultado.
+    - Muestra todas las claves y todos los valores del diccionario.
+"""
+print ("🔸🔸🔸 DICCIONARIO NOMBRES 🔸🔸🔸\n")
+diccionario = {"Simón": 2, "Erika": 3, "Ramona": 6}
+print (diccionario)
+print ("\n--> Edad del primer elemento: ", diccionario ["Simón"])
+
+diccionario ["Antonia"] = 10
+print ("\n--> Diccionario Actualizado: ", diccionario)
+
+del diccionario ["Ramona"]
+print ("\n--> Diccionario Sin Elemento 'Ramona': ", diccionario)
+print ("\n------------------------------------------\n")
+#-------------------------------------------------------------
+# 3.
+"""
+    3. Crea un diccionario con los nombres de cinco productos como claves y sus precios como valores. Luego:
+    - Muestra el precio de un producto específico.
+    - Incrementa el precio de todos los productos en un 10%.
+    - Muestra el diccionario actualizado.
+"""
+print ("🔸🔸🔸 DICCIONARIO PRODUCTOS 🔸🔸🔸\n")
+dict_productos = {"Cuaderno": 3000, "Lapicera": 1000, "Corrector": 600, "Resaltador": 800, "Regla": 200}
+print (F"Listado Total:\n{dict_productos}")
+
+print ("\n--> El Precio de un Cuaderno es: $", dict_productos["Cuaderno"])
+
+valores = dict_productos.values()
+print (F"\n❌ Lista de Precios Anterior: {valores} ❌")
+
+mi_lista = []
+
+for valor in valores:
+    aumento = valor * 0.10
+    nuevo_valor = int (valor + aumento) 
+    mi_lista.append(nuevo_valor)
+   
+print (F"❗❗ Hay Cambio de Precios ❗❗ ")
+
+nuevos_datos = {"Cuaderno": 3300, "Lapicera": 1000, "Corrector": 660, "Resaltador": 880, "Regla": 220}
+
+dict_productos.update(nuevos_datos)
+
+print (F"\n--> Lista Actualizada: {dict_productos}")
+print ("\n------------------------------------------\n")
+#-------------------------------------------------------------
+# 4.
+"""
+    4. Crea un conjunto con los números del 1 al 5 y otro conjunto con los números del 4 al 8. Muestra:
+    - La intersección de los dos conjuntos.
+    - La diferencia simétrica entre los dos conjuntos.
+"""
+print ("🔸🔸🔸 CONJUNTOS 🔸🔸🔸")
+conjunto_num_1 = {1, 2, 3, 4, 5}
+conjunto_num_2 = { 4, 5, 6, 7, 8}
+
+print (F" -> Conjunto 1: {conjunto_num_1}")
+print (F" -> Conjunto 2: {conjunto_num_2}")
+
+
+interseccion = conjunto_num_1.intersection(conjunto_num_2)
+print ("\n--> La INTERSECCIÓN de Ambos Conjuntos está dada por los elementos: ", interseccion)
+
+diferencia_a = conjunto_num_1.difference(conjunto_num_2) 
+diferencia_b = conjunto_num_2.difference (conjunto_num_1)
+diferencias = diferencia_a.union(diferencia_b) 
+print ("\n--> La DIFERENCIA de Ambos Conjuntos está dada por los elementos: ", diferencias)
+print ("\n------------------------------------------\n")
+#-------------------------------------------------------------
+## ⏩⏩ EJERCICIO 5: Funciones ⏪⏪
+#-------------------------------------------------------------
+# 1.
+"""
+    1. Define una función `saludar(nombre)` que reciba un nombre y muestre un saludo. Luego llama a esta función con tu propio nombre.
+"""
+print ("🔸🔸🔸 FUNCIONES 🔸🔸🔸\n")
+def saludar (nombre):
+    print (F"--> Hola {nombre} 💜")
+
+nombre = "Debh"
+saludar(nombre)
+print ("\n------------------------------------------\n")
+#-------------------------------------------------------------
+# 2.
+"""
+    2. Define una función `suma(a, b)` que reciba dos números y retorne su suma. Luego prueba la función con dos números diferentes.
+"""
+def suma (a,b):
+    return a + b
+
+a = 10
+b = 20
+
+print (F" -> {a} + {b} es igual a = {suma (a,b)}")
+print ("\n------------------------------------------\n")
+#-------------------------------------------------------------
+# 3.
+"""
+    3. Define una función `es_mayor_de_edad(edad)` que reciba una edad y retorne `True` si la edad es mayor o igual a 18 y `False` en caso contrario. Prueba la función con diferentes edades.
+"""
+print ("\n------------------------------------------\n")
