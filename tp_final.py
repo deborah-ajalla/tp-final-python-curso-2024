@@ -2,7 +2,7 @@
 #------------------------------------------------------------
 ##  ⏩⏩ EJERCICIO 1: Números y Cadenas de Caracteres ⏪⏪
 #-------------------------------------------------------------
-#1.
+# 1.
 """
     1. Escribe un programa que pida al usuario dos números enteros y realice lo siguiente:
     - Muestra la suma de los dos números.
@@ -23,10 +23,9 @@ print ("\n-----------------------------------------")
 print (F"> La suma de {num_1} y {num_2} es: {suma} ✔\n")
 print (F"> El producto de {num_1} y {num_2} es: {producto} ✔\n")
 print (F"> Ambos números concatenados: {concatenacion} ✔")
-print ("------------------------------------------")
-
+print ("------------------------------------------\n")
 #-------------------------------------------------------------
-#2.
+# 2.
 """
     2. Pide al usuario una cadena de texto. Luego muestra:
     - La cadena en mayúsculas.
@@ -34,7 +33,7 @@ print ("------------------------------------------")
     - La cadena invertida.
     - La cantidad de veces que aparece una letra específica (elige una letra y pídesela al usuario).
 """
-cadena = input ("\n-> Ingrese una Cadena de Texto: ")
+cadena = input ("-> Ingrese una Cadena de Texto: ")
 letra = input ("-> Elija una letra de la Cadena Ingresada: ")
 
 cadena_invertida = cadena [::-1]
@@ -43,28 +42,27 @@ print ("------------------------------------------")
 print (F"> La Cadena Ingresada en Mayúscula es: '{cadena.upper()}' ✔ \n")
 print (F"> La Cadena Ocupa: {len(cadena)} caracteres ✔ \n")
 print (F"> La Letra Elegida '{letra}' se repite: {cadena.count(letra)} veces ✔ \n")
-print (F"> La Cadena Invertida Queda:'{cadena_invertida}' ✔ \n")
+print (F"> La Cadena Invertida Queda:'{cadena_invertida}' ✔")
 
-print ("------------------------------------------")
+print ("\n------------------------------------------\n")
 #-------------------------------------------------------------
-#3.
+# 3.
 """
     3. Escribe un programa que convierta un número decimal a binario y viceversa.
 """
 numero = int (input ("Ingrese un número decimal: "))
 binario = input ("Ingrese un número binario: ")
 numero_binario = bin (numero)
-print ("------------------------------------------")
-print (F"> El número decimal: '{numero}' en binario es: {numero_binario} ✔ \n")
-print (F"> El Número binario: '{binario}' en decimal es: {int(binario, 2)} ✔ \n")
 
-print ("------------------------------------------")
+print (F"\n> El número decimal: '{numero}' en binario es: {numero_binario} ✔")
+print (F"> El Número binario: '{binario}' en decimal es: {int(binario, 2)} ✔")
+
+print ("\n------------------------------------------\n")
 #-------------------------------------------------------------
 #4.
 """
     4. Pide al usuario una cadena y un número entero. Muestra la cadena repetida el número de veces indicado por el número entero.
 """
-
 cadena_usuario = input ("-> Ingrese una Cadena de Texto: ")
 repeticiones = int (input ("-> Ingrese un Número Entero (del 1 al 10): "))
 
@@ -72,7 +70,7 @@ r = 0
 while r < repeticiones:
     r+=1
     print(F" > {cadena_usuario}, repetición nº: {r}") 
-
+print ("\n------------------------------------------\n")
 #-------------------------------------------------------------
 ## ⏩⏩ EJERCICIO 2: Listas y Tuplas ⏪⏪
 #-------------------------------------------------------------
@@ -85,7 +83,6 @@ while r < repeticiones:
     - Elimina una fruta de la lista y muestra el resultado.
 """
 lista_frutas = ["cereza", "pera", "durazno"]
-print ("\n------------------------------------------\n")
 print (F"--> Listado de Frutas: {lista_frutas} ✔")
 
 lista_frutas.append ("frutilla")
@@ -98,7 +95,6 @@ print (F" \n--> Listado Ordenado: {lista_frutas} ✔")
 lista_frutas.pop ()
 print (F"\n--> Listado Actualizado Sin La Última Fruta: {lista_frutas} ✔")
 print ("\n------------------------------------------\n")
-
 #-------------------------------------------------------------
 # 2.
 """
@@ -107,15 +103,16 @@ print ("\n------------------------------------------\n")
     - Convierte la tupla en una lista, añade una nueva ciudad y muestra la lista resultante.
 """
 ciudades = ("Roma", "Moscú")
-print ("--> CIUDADES <--")
-print (F"--> Primera de la Tupla: {ciudades[0]} ✔")
-print (F"--> Última de la Tupla: {ciudades[1]} ✔")
+print ("--> TUPLA DE CIUDADES <--")
+print (F"> Primera Ciudad: {ciudades[0]} ✔")
+print (F"> Última Ciudad: {ciudades[1]} ✔")
 
 lista_ciudades = []
 lista_ciudades.append (ciudades[0])
 lista_ciudades.append (ciudades[1])
 lista_ciudades.append ("Las Vegas")
-print (F"--> La Lista de Ciudades es: {lista_ciudades} ✔")
+print ("-> Se agrega una Nueva Ciudad...")
+print (F"--> La Lista de Ciudades Final es: {lista_ciudades} ✔")
 print ("\n------------------------------------------\n")
 #-------------------------------------------------------------
 # 3.
@@ -129,18 +126,19 @@ lista_numeros = [3, 1, 6, 2]
 print (F"--> Lista de Números: {lista_numeros} ✔ \n")
 
 lista_numeros.sort()
-print (F"--> El Número Mayor es: {lista_numeros[-1]} ✔ \n")
-print (F"--> El Número Menor es: {lista_numeros[0]} ✔ \n")
+print (F"-> El Número Mayor es: {lista_numeros[-1]} ✔ \n")
+print (F"-> El Número Menor es: {lista_numeros[0]} ✔ \n")
 
 suma_lista = sum(lista_numeros)                  # --> suma todos los elementos de la lista ✔
 promedio_lista = suma_lista / len (lista_numeros)
-print (F"--> El Promedio de los elementos de la Lista es: {promedio_lista} ✔")
+print (F"-> El Promedio de los elementos de la Lista es: {promedio_lista} ✔")
 print ("\n------------------------------------------\n")
 #-------------------------------------------------------------
 # 4.
 """
     4. Escribe un programa que reciba una lista de cadenas y muestre la lista con todas las cadenas en mayúsculas.
 """
+print ("--> Armamos una Lista de Cadenas ...")
 lista_cadenas = []
 elemento_cadena = int (input ("Ingrese la Cantidad de Cadenas que desea cargar (del 1 al 9): "))
 
@@ -149,7 +147,7 @@ while e < elemento_cadena:
     nuevo_elemento = input ("> Ingrese una Cadena: ")
     lista_cadenas.append(nuevo_elemento.upper())
     e+=1
-print (F" --> La Lista está compuesta por: {lista_cadenas} ✔")    
+print (F"--> La Lista está compuesta por: {lista_cadenas} ✔")    
 print ("\n------------------------------------------\n")
 #-------------------------------------------------------------
 ## ⏩⏩ EJERCICIO 3: Controladores de Flujo ⏪⏪
@@ -158,7 +156,8 @@ print ("\n------------------------------------------\n")
 """
     1. Escribe un programa que pida un número al usuario. Muestra si el número es par o impar.
 """
-numero_usuario = int (input ("--> Ingrese un Número: "))
+print ("-> Analizamos si un nº es par o impar ...")
+numero_usuario = int (input ("> Ingrese un Número: "))
 
 if (numero_usuario % 2) == 0:
     print (F"> El Número '{numero_usuario}' es par ✔")
@@ -174,7 +173,7 @@ else:
         3. Salir
         - Dependiendo de la opción elegida, muestra un mensaje correspondiente. Si se elige 3, el programa debe terminar.
 """
-print ("\t 🔸🔸🔸🔸🔸 BIENVENIDO/A 🔸🔸🔸🔸🔸\n")
+print (" 🔸🔸🔸🔸🔸 BIENVENIDO/A 🔸🔸🔸🔸🔸\n")
   
 nombre_usuario = input ("Ingrese su Nombre: ")
 nombre_usuario = nombre_usuario.title()
@@ -189,17 +188,20 @@ while True:
     opcion = input ("\n >> Ingrese una opción del 1 al 3: ")
    
     if opcion == "1":
+         print ("-----------------------")
          print (F"   -> Hola {nombre_usuario} 😊")
 
     elif opcion == "2":
+         print ("-----------------------")
          print (F"   -> Adiós {nombre_usuario} 🤗")
     elif opcion == "3":
+        print ("-----------------------")
         print (F"   -> Hasta Luego {nombre_usuario} 😊")
         break
     else:
+        print ("-----------------------")
         print (F"  ❌❌ Por Favor {nombre_usuario} ingresá una opción correcta ❌❌")
 print ("\n  😊 Gracias Vuelva Pronto!!😊")
-print ("----------------------")
 
 print ("\n------------------------------------------\n")
 #-------------------------------------------------------------
@@ -207,6 +209,7 @@ print ("\n------------------------------------------\n")
 """
     3. Escribe un programa que pida un número al usuario y determine si es positivo, negativo o cero.
 """
+print ("-> Analizamos si un nº es positivo/negativo ...")
 un_numero =  int (input ("> Ingrese un número entero: "))
     
 if un_numero > 0: 
@@ -281,9 +284,10 @@ print ("\n------------------------------------------\n")
 print ("🔸🔸🔸 DICCIONARIO NOMBRES 🔸🔸🔸\n")
 diccionario = {"Simón": 2, "Erika": 3, "Ramona": 6}
 print (diccionario)
-print ("\n--> Edad del primer elemento: ", diccionario ["Simón"])
+print ("\n-> Edad del primer elemento: ", diccionario ["Simón"])
 
 diccionario ["Antonia"] = 10
+print (" > Se agrega un nuevo elemento ...")
 print ("\n--> Diccionario Actualizado: ", diccionario)
 
 del diccionario ["Ramona"]
@@ -376,4 +380,15 @@ print ("\n------------------------------------------\n")
 """
     3. Define una función `es_mayor_de_edad(edad)` que reciba una edad y retorne `True` si la edad es mayor o igual a 18 y `False` en caso contrario. Prueba la función con diferentes edades.
 """
+def es_mayor_de_edad(edad):
+    if edad >= 18:
+        return True
+    else:
+        return False
+
+print ("🔸🔸 ANALIZAMOS SI UD ES MAYOR DE EDAD: ")
+edad = int (input ("--> Ingrese Su Edad: "))
+print (es_mayor_de_edad(edad))
+print ("------------------------------------------\n")
+print ("\t>>>>>>>>>> FIN <<<<<<<<<<< ")
 print ("\n------------------------------------------\n")
